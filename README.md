@@ -14,5 +14,5 @@ The rule for 'Using additional libraries is prohibited' was broken by choosing S
 #### Outputs the discount result in the response body
 ``curl -F file=@path/to/input.txt http://localhost:8080/transaction``
 
-## Still figuring out why h2 databse throws errors for Tests...
+## Unit tests added for Input reading and Transaction validation service classes
 
