@@ -34,13 +34,17 @@ public class DeliveryInputUtil {
                 String[] lineVal = line.split(" ");
                 DeliveryInput di = new DeliveryInput();
 
-                try {
-                    di.setTrxDate(lineVal[0]);
-                    di.setPackageSize(lineVal[1]);
-                    di.setCarrier(lineVal[2]);
-                } catch (ArrayIndexOutOfBoundsException e) {
+                if (lineVal.length == 3) {
+                    try {
+                        di.setTrxDate(lineVal[0]);
+                        di.setPackageSize(lineVal[1]);
+                        di.setCarrier(lineVal[2]);
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                        di.setInvalidData(line);
+                        e.printStackTrace();
+                    }
+                } else {
                     di.setInvalidData(line);
-                    e.printStackTrace();
                 }
 
                 deliveryInputs.add(di);
