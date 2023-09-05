@@ -15,4 +15,5 @@ The rule for 'Using additional libraries is prohibited' was broken by choosing S
 ``curl -F file=@path/to/input.txt http://localhost:8080/transaction``
 
 ## Unit tests added for Input reading and Transaction validation service classes
+``./gradlew test``
 
